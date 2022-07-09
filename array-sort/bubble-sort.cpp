@@ -22,7 +22,7 @@ int main(){
     }
     cout<<"The array in ascending order is: ";
     for(i=0; i<n; i++){
-        cout<<num[i]<<"\t";
+        cout<<num[i]<<" ";
     }
     return 0;
 }
