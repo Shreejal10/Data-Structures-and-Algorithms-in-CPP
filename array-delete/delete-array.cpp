@@ -10,7 +10,7 @@ int main() {
     for(i=0; i<n; i++){
         cin>>arr[i];
     }
-    cout<<"Enter poition to delete number: ";
+    cout<<"Enter position to delete number: ";
     cin>>pos;
     for(i=pos-1; i<n; i++){
         arr[i]=arr[i+1];
