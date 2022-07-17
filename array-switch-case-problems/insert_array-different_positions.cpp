@@ -19,7 +19,7 @@ int main() {
     do{
         cout<<"\nPress 1 for inserting an element in beginning of an array"<<endl;
         cout<<"Press 2 for inserting an element in any position of an array"<<endl;
-        cout<<"Press 3 for inseting an element in end of an array"<<endl;
+        cout<<"Press 3 for inserting an element in end of an array"<<endl;
         cout<<"Press 4 to display the resulting array"<<endl;
         cout<<"Your choice: ";
         cin>>choice;
