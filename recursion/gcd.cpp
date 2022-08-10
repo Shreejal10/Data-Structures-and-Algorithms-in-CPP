@@ -2,12 +2,12 @@
 using namespace std;
 
 long int gcd(int a, int b){
-    while(b !=0){
-        int r = a % b;
-        a = b;
-        b = r;
+    if(a==0){
+        return b;
     }
-    return a;
+    else{
+        return gcd(b % a, a);
+    }
 }
 
 int main(){
