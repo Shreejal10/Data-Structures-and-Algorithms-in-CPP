@@ -5,7 +5,7 @@ class queue{
     private:
         int *arr;
         int front;
-        int back;
+        int rear;
         int n;
     public:
         queue(){
@@ -13,22 +13,22 @@ class queue{
             cin>>n;
             arr =new int[n];
             front=-1;
-            back=-1;
+            rear=-1;
         }
         void enqueue(int x){
-            if(back==n-1){
+            if(rear==n-1){
                 cout<<"Queue overflow"<<endl;
             }
             else{
-                back++;
-                arr[back]=x;
+                rear++;
+                arr[rear]=x;
                 if(front==-1){
                     front++;
                 }
             }
         }
         int dequeue(){
-            if(front==-1 || front>back){
+            if(front==-1 || front>rear){
                 cout<<"No elements in queue to remove"<<endl;
                 return -1;
             }
@@ -39,7 +39,7 @@ class queue{
             }
         }
         int peek(){
-            if(front==-1 || front>back){
+            if(front==-1 || front>rear){
                 cout<<"No elements in queue"<<endl;
                 return -1;
             }
@@ -48,13 +48,24 @@ class queue{
             }
         }
         void empty(){
-            if(front==-1 || front>back){
+            if(front==-1 || front>rear){
                 cout<<"Queue is empty"<<endl;
             }
             else{
                 cout<<"Queue is not empty"<<endl;
             }
             
+        }
+        void display(){
+            if(front==-1 || front>rear){
+                cout<<"Queue is empty"<<endl;
+            }
+            else{
+                cout<<"The elements in the queue are: ";
+                for(int i=front; i<=rear; i++){
+                    cout<<arr[i]<<" ";
+                }
+            }
         }
 
 };
@@ -66,6 +77,9 @@ int main(){
     q.enqueue(2);
     q.enqueue(3);
     q.enqueue(4);
+
+    q.display();
+    cout<<endl;
 
     cout<<"After adding elements: ";q.empty();
 
