@@ -53,6 +53,25 @@ void deleteAtHead(node* &head){
     delete toDelete;
 }
 
+void deleteAtTail(node* &head){
+    if(head==NULL){
+        return;
+    }
+    else if(head->next==NULL){
+        node* temp = head;
+        head=NULL;
+        delete temp;
+    }
+    else{
+        node* temp = head;
+        while(temp->next->next!=NULL){
+            temp = temp->next;
+        }
+        delete temp->next;
+        temp->next=NULL;
+    }
+}
+
 void deletion(node* &head, int val){
     if(head == NULL){
         return;
