@@ -17,7 +17,7 @@ void ShellSort(int arr[], int n){
 }
 
 int main(){
-    int num[Max],n, i,j,temp;
+    int num[Max],n, i;
     cout<<"Enter number of elements in array:";
     cin>>n;
     cout<<"Enter "<<n<<" numbers: ";
